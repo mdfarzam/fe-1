@@ -5,13 +5,15 @@ import DoctorScheduleDashboard from "./pages/doctor-schedule-dashboard";
 import PharmacistDashboard from "./pages/pharma";
 import DoctorProfilePage from "./pages/doc-profile";
 import PatientDetailsPage from "./pages/patient";
+import Dashboard from "./pages/dashboard";
+import { HealthSummary } from "./components/ui/health-summary";
 
 export default function Signup() {
   const [role, setRole] = useState("");
   return (
-    <div>
-    <div className="min-h-screen flex items-start justify-center bg-gray-50 py-12">
-      <div className="w-full max-w-md p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+    <div className="min-h-screen flex flex-col items-center bg-gray-50 py-12">
+      {/* Signup Card */}
+      <div className="w-full max-w-md p-6 bg-white border border-gray-200 rounded-xl shadow-sm mb-8">
         {/* Title */}
         <h1 className="text-3xl font-bold text-sky-600 mb-6">Sign up</h1>
 
@@ -52,21 +54,17 @@ export default function Signup() {
         </button>
       </div>
 
-
-{/*       
-    <DoctorDashboard />
-    <DoctorScheduleDashboard />
-    <PharmacistDashboard />
-    <DoctorProfilePage />
-    <PatientDetailsPage />   
-    */}
-
-
-
-
-</div>
-
-
+      {/* Dashboards in column order */}
+      <div className="w-full max-w flex flex-col space-y-8">
+        <DoctorDashboard />
+        <DoctorScheduleDashboard />
+        <PharmacistDashboard />
+        <DoctorProfilePage />
+        <PatientDetailsPage />
+        <Dashboard />
+        
+        <HealthSummary/>
+      </div>
     </div>
   );
 }

@@ -82,26 +82,21 @@ export default function PatientDetailsPage() {
 
                   <div className="space-y-1 ">
                     <h2 className="text-xl font-bold text-foreground">{patientData.name}</h2>
-                    <p className="text-muted-foreground">
+                    <p className="text-sky-600">
                       {patientData.age} years old, {patientData.gender}
                     </p>
                   </div>
 
                   <div className="w-full space-y-2 text-sm">
-                    <div className="flex items-center gap-2 text-muted-foreground">
+                    <div className="flex items-center gap-2 text-black">
                       <Phone className="h-4 w-4" />
                       <span>{patientData.phone}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-muted-foreground">
+                    <div className="flex items-center gap-2 text-black">
                       <Mail className="h-4 w-4" />
                       <span className="truncate">{patientData.email}</span>
                     </div>
                   </div>
-
-                  <Button variant="outline" size="sm" className="w-full bg-transparent">
-                    <User className="h-4 w-4 mr-2" />
-                    Edit Profile
-                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -109,7 +104,7 @@ export default function PatientDetailsPage() {
             {/* Health Summary */}
             <Card className="bg-gray-50">
               <CardHeader>
-                <CardTitle className="text-lg">Health Summary</CardTitle>
+                <CardTitle className="text-xl font-semibold text-sky-700">Health Summary</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
@@ -126,7 +121,7 @@ export default function PatientDetailsPage() {
                 <Separator />
 
                 <div>
-                  <h4 className="font-medium text-sm text-muted-foreground mb-1">Blood Group</h4>
+                  <h4 className="font-medium text-sm text-muted-foreground mb-1 flex"><p className="text-red-500 ">Blood</p> -Group</h4>
                   <p className="font-medium">{patientData.bloodGroup}</p>
                 </div>
 
@@ -136,7 +131,7 @@ export default function PatientDetailsPage() {
                   <h4 className="font-medium text-sm text-muted-foreground mb-2">Chronic Conditions</h4>
                   <div className="space-y-1">
                     {patientData.chronicConditions.map((condition) => (
-                      <Badge key={condition} variant="outline" className="text-xs mr-1">
+                      <Badge key={condition} className="text-xs mr-1 bg-sky-600 text-white">
                         {condition}
                       </Badge>
                     ))}
@@ -185,15 +180,15 @@ export default function PatientDetailsPage() {
                       <CardContent className="p-4">
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-3">
-                            <div className="p-2 bg-muted rounded-lg">
-                              <record.icon className="h-5 w-5 text-muted-foreground" />
+                            <div className="p-2 bg-muted rounded-lg bg-transparent">
+                              <record.icon className="h-5 w-5 text-sky-600 " />
                             </div>
                             <div>
                               <h3 className="font-medium text-foreground">{record.title}</h3>
                               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                                 <span>{record.date}</span>
                                 <span>•</span>
-                                <Badge variant="secondary" className="text-xs">
+                                <Badge className="text-xs bg-sky-600 text-white">
                                   {record.type}
                                 </Badge>
                               </div>
