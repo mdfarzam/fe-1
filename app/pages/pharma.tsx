@@ -1,5 +1,5 @@
 "use client"
-
+import { Avatar, AvatarFallback, AvatarImage } from "@/app/components/ui/avatar"
 import { useState } from "react"
 import { Search, X, Plus, Minus, Filter } from "lucide-react"
 import { Button } from "@/app/components/ui/button"
@@ -76,9 +76,14 @@ export default function PharmacistDashboard() {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-3xl font-bold text-foreground">Pharmacist Dashboard</h1>
+
             <p className="text-muted-foreground mt-1">Manage your medicine inventory efficiently</p>
           </div>
+          <div className="flex items-center space-x-4"> <div className="text-right"> <p className="text-lg font-semibold text-slate-900 leading-6">Dr. Steven Brown</p> <p className="text-sm text-slate-500 leading-5">Medical Practitioner</p> </div> <Avatar className="w-12 h-12"> <AvatarImage src="/caring-doctor.png" /> <AvatarFallback className="bg-indigo-100 text-indigo-600 font-semibold">SB</AvatarFallback> </Avatar>
+          </div>
         </div>
+
+
 
         {/* Search Bar */}
         <Card className="flex justify-center h-12 bg-gray-50">

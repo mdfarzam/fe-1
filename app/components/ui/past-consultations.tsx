@@ -230,7 +230,7 @@ export function PastConsultations() {
   const consultations = mockConsultations;
 
   return (
-    <Card className="card-shadow mt-6 w-198  mx-auto">
+    <Card className="card-shadow mt-6 w-198  mx-auto h-214">
       <CardContent>
         {/* Header */}
         <div className="flex items-center justify-between mb-6">

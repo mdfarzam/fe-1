@@ -1,5 +1,6 @@
 "use client"
 
+import { Avatar, AvatarFallback, AvatarImage } from "@/app/components/ui/avatar"
 import { useState } from "react"
 import { Calendar, Clock, Plus, ChevronLeft, ChevronRight, Settings } from "lucide-react"
 import { Button } from "@/app/components/ui/button"
@@ -82,14 +83,7 @@ export default function DoctorScheduleDashboard() {
             <h1 className="text-3xl font-bold text-foreground mb-2">Schedule Dashboard</h1>
             <p className="text-muted-foreground">Manage your daily availability and appointments</p>
           </div>
-          <div className="flex items-center gap-4">
-            <Badge variant="outline" className="px-3 py-1">
-              Dr. Sarah Johnson
-            </Badge>
-            <Button variant="outline" size="icon">
-              <Settings className="h-4 w-4" />
-            </Button>
-          </div>
+          <div className="flex items-center space-x-4"> <div className="text-right"> <p className="text-lg font-semibold text-slate-900 leading-6">Dr. Steven Brown</p> <p className="text-sm text-slate-500 leading-5">Medical Practitioner</p> </div> <Avatar className="w-12 h-12"> <AvatarImage src="/caring-doctor.png" /> <AvatarFallback className="bg-indigo-100 text-indigo-600 font-semibold">SB</AvatarFallback> </Avatar> </div>
         </div>
       </div>
 

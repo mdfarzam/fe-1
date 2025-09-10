@@ -62,7 +62,29 @@ const medicalRecords = [
 export default function PatientDetailsPage() {
   return (
     <div className="min-h-screen bg-white p-6 mt-50">
-      <div className="mx-auto max-w-7xl">
+
+
+      <nav className=" pb-8 w-full bg-white  px-12 py-4 flex items-center justify-between">
+      {/* Left: App Name */}
+      <div>
+        <p className="text-4xl font-bold text-blue-900">ArogyaSetu</p>
+      </div>
+      {/* Right: Avatar & Name */}
+      <div className="flex items-center space-x-4">
+        <div className="text-right">
+          <p className="text-lg font-semibold text-slate-900 leading-6">Dr. Steven Brown</p>
+          <p className="text-sm text-slate-500 leading-5">Medical Practitioner</p>
+        </div>
+        <Avatar className="w-12 h-12">
+          <AvatarImage src="/caring-doctor.png" />
+          <AvatarFallback className="bg-indigo-100 text-indigo-600 font-semibold">SB</AvatarFallback>
+        </Avatar>
+      </div>
+    </nav>
+  
+
+  
+      <div className="mx-auto max-w-7xl">      
         <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
           {/* Left Sidebar - 30% width */}
           <div className="lg:col-span-3 space-y-6">

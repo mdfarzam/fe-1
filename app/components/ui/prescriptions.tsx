@@ -155,13 +155,7 @@ export function Prescriptions() {
                     {prescription.doctor.name}
                   </p>
                   <div className="flex items-center space-x-2">
-                    <Button
-                      size="sm"
-                      className="bg-primary text-primary-foreground hover:bg-primary/90"
-                      data-testid={`button-order-refill-${prescription.id}`}
-                    >
-                      Order Refill
-                    </Button>
+                    
                     <Button
                       variant="outline"
                       size="sm"

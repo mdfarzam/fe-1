@@ -7,6 +7,9 @@ import DoctorProfilePage from "./pages/doc-profile";
 import PatientDetailsPage from "./pages/patient";
 import Dashboard from "./pages/dashboard";
 import { HealthSummary } from "./components/ui/health-summary";
+import OnboardingForm from "./pages/doc-input";
+import PharmacistOnboardingForm from "./pages/pharma-input";
+import UserOnboardingForm from "./components/ui/user-onboard";
 
 export default function Signup() {
   const [role, setRole] = useState("");
@@ -56,6 +59,9 @@ export default function Signup() {
 
       {/* Dashboards in column order */}
       <div className="w-full max-w flex flex-col space-y-8">
+        <OnboardingForm />  
+        <PharmacistOnboardingForm />
+        <UserOnboardingForm />
         <DoctorDashboard />
         <DoctorScheduleDashboard />
         <PharmacistDashboard />
