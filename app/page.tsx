@@ -63,7 +63,7 @@ export default function Signup() {
         <PharmacistOnboardingForm />
         <UserOnboardingForm />
         <DoctorDashboard />
-        <DoctorScheduleDashboard />
+        {/* <DoctorScheduleDashboard /> */}
         <PharmacistDashboard />
         <DoctorProfilePage />
         <PatientDetailsPage />
